@@ -5,7 +5,7 @@ function incrementState() {
       s1 = parseInt(state[1]);
 
   s1++;
-  if (s1 > 3) {
+  if (s1 > 4) {
     s0++;
     s1 = 0;
   }

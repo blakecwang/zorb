@@ -239,8 +239,8 @@ function makeDispenserClickable() {
       if (getState(1) == 2) {
         stopDispenserBlinking();
         launchZorb();
+        incrementState();
       }
-      incrementState();
     }
   })
 }
@@ -276,6 +276,7 @@ function makeStripErasable() {
 
       // Pick a number! Any number!
       initRulerBlinking();
+      incrementState();
     }
   });
 }
