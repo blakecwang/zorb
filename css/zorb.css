@@ -108,3 +108,7 @@
 #shape-col-4 {
   background: red;
 }
+
+.white {
+  color: white !important;
+}

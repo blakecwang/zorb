@@ -273,6 +273,9 @@ function makeStripErasable() {
 
       // Only do this once.
       stripReady = false;
+
+      // Pick a number! Any number!
+      initRulerBlinking();
     }
   });
 }

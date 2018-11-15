@@ -10,7 +10,8 @@ var corralWidth,
     shapeAttributes,
     shapesWhite,
     shapeColor,
-    shapeBlink;
+    shapeBlink,
+    rulerBlink;
 
 // Set up the corral canvas.
 function setupCorralCanvas() {
@@ -147,6 +148,19 @@ function makeShapesClickable() {
       incrementState();
     }
   })
+}
+
+// Start ruler blinking.
+function initRulerBlinking() {
+  rulerBlink = setInterval(function() {
+    $(".tick").toggleClass("white");
+  }, 200);
+}
+
+// Stop the ruler from blinking.
+function stopRulerBlinking() {
+  clearInterval(rulerBlink);
+  $(".tick").removeClass("white");
 }
 
 setupCorralCanvas();
