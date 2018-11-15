@@ -1,0 +1,110 @@
+/*********** GLOBAL ***********/
+
+* {
+  font-family: Comic Sans MS, Comic Sans MS5, cursive;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.stroked {
+  border: 6px solid black;
+}
+
+.container {
+  width: 1300px !important;
+}
+
+#state {
+#  display: none;
+}
+
+/*********** UPPER ***********/
+
+#game-canvas-wrapper {
+  height: 360px;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+/*********** MIDDLE ***********/
+
+#launchpad {
+  background: darkgreen;
+  height: 50px;
+  border-right: 0px;
+}
+
+#ruler {
+  background: yellow;
+  height: 50px;
+  border-left: 0px;
+}
+
+#launchpad, #ruler {
+  border-top: 0px;
+}
+
+.tick {
+  padding-left: 6px !important;
+  padding-top: 0px !important;
+  border-left: 6px solid black;
+  height: 30px;
+}
+
+#tick-0 {
+  height: 50px;
+}
+
+/*********** LOWER ***********/
+
+#corral-canvas-wrapper {
+  height: 204px;
+  padding: 0px;
+}
+
+#corral, #notepad {
+  margin-top: 12px;
+}
+
+#corral > .row {
+  background: lightgrey;
+  margin-right: -9px;
+}
+
+#notepad > .row {
+  background: lightyellow;
+  margin-left: -9px;
+}
+
+.entry-col {
+  height: 60px;
+}
+
+#entry-row-1 {
+  border-bottom: 3px solid black;
+}
+
+#entry-row-2 {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+#entry-row-3 {
+  border-top: 3px solid black;
+}
+
+#shape-col-1 {
+  background: blue;
+}
+
+#shape-col-2 {
+  background: purple;
+}
+
+#shape-col-3 {
+  background: yellow;
+}
+
+#shape-col-4 {
+  background: red;
+}

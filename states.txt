@@ -1,0 +1,18 @@
+- GAME and CORRAL depend on s1 only
+- NOTEPAD depends on s0 and s1
+
+STATE   GAME                 NOTEPAD     CORRAL             NEXT
+0-0     empty                empty       shapes blinking    click shape
+0-1     L ramp               R1 L ramp   shapes blinking    click shape
+0-2     dispenser blinking   R1 R ramp   shapes             click dispenser
+0-3     partial strip        R1 R ramp   numbers blinking   click number
+
+1-0     empty                R1 number   shapes blinking    click shape
+1-1     L ramp               R2 L ramp   shapes blinking    click shape
+1-2     dispenser blinking   R2 R ramp   shapes             click dispenser
+1-3     partial strip        R2 R ramp   numbers blinking   click number
+
+2-0     empty                R2 number   shapes blinking    click shape
+2-1     L ramp               R3 L ramp   shapes blinking    click shape
+2-2     dispenser blinking   R3 R ramp   shapes             click dispenser
+2-3     partial strip        R3 R ramp   numbers blinking   click number
