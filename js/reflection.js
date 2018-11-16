@@ -1,4 +1,6 @@
 // Init reflection time.
 function reflectionTime() {
-  alert("Which combination of shapes launched the zorb farthest?");
+  setTimeout(function() {
+    alert("Which combination of shapes launched the zorb farthest?");
+  }, 1000);
 }
