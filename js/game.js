@@ -19,12 +19,16 @@ var Engine,
     disW,
     disH,
     strip,
-    stripReady;
+    stripReady,
+    ramps;
 
 // Set up the game.
 function setupGame() {
   // Init setupGame vars.
   var ground;
+
+  // Create an array to hold the ramp objects.
+  ramps = [];
 
   // Init the main MatterJS entities.
   Engine = Matter.Engine;
@@ -62,6 +66,16 @@ function setupGame() {
       wireframes: false
     }
   });
+
+  // Run the Render.
+  Render.run(render);
+}
+
+// Reset the game.
+function resetGame() {
+  // Clear the world.
+  World.clear(engine.world);
+  Engine.clear(engine);
 
   // Set the category for non-colliding objects.
   avoidCategory = 0x0002;
@@ -113,18 +127,12 @@ function setupGame() {
 
   // Add all of the bodies to the World.
   World.add(engine.world, [ground, dispenser, strip]);
-
-  // Run the Render.
-  Render.run(render);
 }
 
-// Reset the game.
-function resetGame() {
-  // Init resetGame vars.
-  var zorb;
-
+// And...go!
+function launchZorb() {
   // Create the zorb.
-  zorb = Bodies.circle(
+  var zorb = Bodies.circle(
     50,
     -35,
     30,
@@ -146,13 +154,13 @@ function resetGame() {
     { x: 0, y: 38 }
   );
 
+  // Add the zorb to the world.
   World.add(engine.world, zorb);
-}
 
-// And...go!
-function launchZorb() {
-  // Run the Engine.
-  Engine.run(engine);
+  // Run the engine if necessary.
+  if (getState(0) == 0) {
+    Engine.run(engine);
+  }
 }
 
 // Add a ramp to the World.
@@ -208,6 +216,7 @@ function addRamp(placeLeft, coord) {
   );
 
   World.add(engine.world, ramp);
+  ramps.push(ramp);
 }
 
 // Make the dispenser blink.

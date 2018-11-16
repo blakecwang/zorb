@@ -17,10 +17,13 @@ function stopRulerBlinking() {
 // Make ruler clickable.
 function makeRulerClickable() {
   $(".tick").click(function(e) {
-//    if (getState(1) == 4) {
+    if (getState(1) == 4) {
       addNumToNotepad($(this).text(), getState(0) + 1);
+      stopRulerBlinking();
+      addBlinkingShapes();
+      resetGame();
       incrementState();
-//    }
+    }
   })
 }
 
