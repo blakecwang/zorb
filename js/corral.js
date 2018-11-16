@@ -163,6 +163,23 @@ function stopRulerBlinking() {
   $(".tick").removeClass("white");
 }
 
+// Add a shape to the notepad.
+function addShapeToNotepad(shape, row, side) {
+  if (shape == 'green' || shape == 'blue') {
+    var klass = 'wide';
+  } else if (shape == 'pink' || shape == 'yellow') {
+    var klass = 'tall';
+  } else {
+    var klass = 'iso';
+  }
+  var selector = `#${row}-${side}`;
+  var img = `<img src="img/${shape}.png" class="${klass}" />`;
+  $(selector).prepend(img)
+}
+
 setupCorralCanvas();
 addBlinkingShapes();
 makeShapesClickable();
+
+addShapeToNotepad('red', 1, 'L');
+addShapeToNotepad('orange', 1, 'R');

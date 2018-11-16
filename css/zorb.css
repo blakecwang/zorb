@@ -112,3 +112,28 @@
 .white {
   color: white !important;
 }
+
+img.wide {
+  width: 55px;
+  height: auto; 
+  transform: translate(0px, 22px);
+}
+
+img.tall {
+  width: auto;
+  height: 55px; 
+}
+
+img.iso {
+  width: 55px;
+  height: auto; 
+}
+
+img {
+  transform: translate(-30px);
+}
+
+.entry-col {
+  position: relative;
+  margin: 0px auto;
+}
