@@ -249,6 +249,15 @@ function makeDispenserClickable() {
         stopDispenserBlinking();
         launchZorb();
         incrementState();
+
+        // Handle case when ball is stuck.
+        setTimeout(function() {
+          if (getState(1) == 3) {
+            stripReady = false;
+            initRulerBlinking();
+            incrementState();
+          }
+        }, 2000);
       }
     }
   })
