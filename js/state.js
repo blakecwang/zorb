@@ -10,7 +10,8 @@ function incrementState() {
     s1 = 0;
   }
   if (s0 > 2) {
-    console.log("Reflection time!");
+    addNonBlinkingShapes();
+    reflectionTime();
   }
 
   $("#state").text(`${s0}-${s1}`);
