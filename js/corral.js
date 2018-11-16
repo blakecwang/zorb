@@ -134,11 +134,13 @@ function makeShapesClickable() {
                    startY - boxes[i][2], startY)) {
         if (getState(1) == 0) {
           addRamp(true, shapeAttributes[i]);
+          addShapeToNotepad(shapeAttributes[i][1], getState(0) + 1, 'L');
           increment = true;
         } else if (getState(1) == 1) {
           addRamp(false, shapeAttributes[i]);
           addNonBlinkingShapes();
           initDispenserBlinking();
+          addShapeToNotepad(shapeAttributes[i][1], getState(0) + 1, 'R');
           increment = true;
         }
       }
