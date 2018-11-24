@@ -22,11 +22,13 @@
 </head>
 
 <body>
-  <div id="signin-btn" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-  <div class="container">
+  <div id="signin" class="container">
+    <div id="signin-btn" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  </div>
+  <div id="main" class="container">
     <div id="upper" class="row">
       <div id="game-canvas-wrapper" class="col-xs-12 stroked">
-        <a id="signout-btn" class="hidden" href="#" onclick="signOut();">Sign out</a>
+        <a id="signout-btn" href="#" onclick="signOut();">Sign out</a>
         <canvas id="game-canvas"></canvas>
       </div>
     </div>
@@ -92,6 +94,9 @@
   <script src="js/ruler.js"></script>
   <script src="js/notepad.js"></script>
   <script src="js/reflection.js"></script>
+  <script>
+    $("#main").addClass("hidden");
+  </script>
 </body>
 
 </html>
