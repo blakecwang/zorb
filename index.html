@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>ZorbLaunch!</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Add google sign in -->
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <title>Zorb Launch</title>
   <link rel="stylesheet" href="css/zorb.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,6 +22,7 @@
 </head>
 
 <body>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   <div class="container">
     <div id="upper" class="row">
       <div id="game-canvas-wrapper" class="col-xs-12 stroked">
@@ -76,6 +83,7 @@
     </div>
   </div>
   <div id="state">0-0</div>
+  <script src="js/signin.js"></script>
   <script src="js/util.js"></script>
   <script src="js/game.js"></script>
   <script src="js/corral.js"></script>
