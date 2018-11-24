@@ -246,6 +246,7 @@ function makeDispenserClickable() {
                  disX - disW / 2, disX + disW / 2,
                  disY - disH / 2, disY + disH / 2)) {
       if (getState(1) == 2) {
+        playSound("pew");
         stopDispenserBlinking();
         launchZorb();
         incrementState();
