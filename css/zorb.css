@@ -2,7 +2,6 @@
 
 * {
   font-family: Comic Sans MS, Comic Sans MS5, cursive;
-  font-size: 24px;
   font-weight: bolder;
 }
 
@@ -49,6 +48,7 @@
   padding-top: 0px !important;
   border-left: 6px solid black;
   height: 30px;
+  font-size: 24px;
 }
 
 #tick-0 {
@@ -143,9 +143,15 @@ img.iso {
   right: 20px;
   top: 10px;
   color: black;
+  font-size: 24px;
 }
-/*
+
 #signin {
-  text-align: middle;
+  margin-top: 200px;
 }
-*/
+
+#signin-btn {
+  float: none;
+  margin: 0 auto;
+  width: 300px;
+}
