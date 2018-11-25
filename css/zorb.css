@@ -155,3 +155,18 @@ img.iso {
   margin: 0 auto;
   width: 300px;
 }
+
+#video-wrapper {
+  border: 6px solid black;
+  padding: 0px;
+  margin-top: 12px;
+  height: 620px;
+  overflow: hidden;
+}
+
+video {
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+  -moz-transform:rotateY(180deg); /* Firefox */
+  width: 963px;
+}
