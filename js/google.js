@@ -8,9 +8,10 @@ function onSignIn(googleUser) {
 //  console.log("Image URL: " + profile.getImageUrl());
 //  console.log("Email: " + profile.getEmail());
 //
-//  // The ID token you need to pass to your backend:
+  // The ID token you need to pass to your backend:
 //  var id_token = googleUser.getAuthResponse().id_token;
 //  console.log("ID Token: " + id_token);
+  console.log(googleUser.getAuthResponse().access_token);
 
   // Show the game.
   $("#main").removeClass("hidden");

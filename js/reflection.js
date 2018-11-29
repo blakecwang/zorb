@@ -77,9 +77,4 @@ function reflectionTime() {
     addVideo();
   }, 1000);
 }
-reflectionTime();
-
-//var record = document.querySelector('#record');
-//var stop = document.querySelector('#stop');
-//var soundClips = document.querySelector('#sound-clips');
-
+// reflectionTime();
