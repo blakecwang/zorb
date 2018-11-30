@@ -9,7 +9,7 @@
 
   <!-- Add google sign in -->
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="609203104426-oa394avfh7d4kcsbt7a70d2oveis0dq1.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="683282580870-k0u34k5v9ju0a0p8uicoamvd962spqt2.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <title>Zorb Launch</title>
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <pre id="list-content" style="white-space: pre-wrap;"></pre>
   <div id="signin" class="container">
     <div id="signin-btn"
       class="g-signin2 centered"
@@ -103,8 +104,9 @@
   <script src="js/notepad.js"></script>
   <script src="js/reflection.js"></script>
   <script src="js/sound.js"></script>
-  <script>
-    $("#main").addClass("hidden");
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
 </body>
 

@@ -78,3 +78,4 @@ function reflectionTime() {
   }, 1000);
 }
 // reflectionTime();
+$("#main").addClass("hidden");
