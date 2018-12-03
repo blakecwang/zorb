@@ -2,6 +2,9 @@ function onSignIn(googleUser) {
   // Show the game.
   $("#main").removeClass("hidden");
   $("#signin").addClass("hidden");
+
+  // Welcome the learner.
+  playSound("hello");
 };
 
 function signOut() {

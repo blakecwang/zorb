@@ -170,13 +170,3 @@ img.iso {
   -moz-transform:rotateY(180deg); /* Firefox */
   width: 963px;
 }
-
-#vid-play {
-  transform: rotateY(180deg);
-  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-  -moz-transform:rotateY(180deg); /* Firefox */
-}
-
-#record, #stop {
-  font-size: 60px;
-}

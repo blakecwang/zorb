@@ -1,4 +1,4 @@
-var soundNames = ["pew", "raspberry", "belch"];
+var soundNames = ["hello", "pew", "raspberry", "belch", "measure"];
 var soundElems = [];
 
 // Set up sounds.

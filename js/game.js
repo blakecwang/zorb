@@ -256,6 +256,7 @@ function makeDispenserClickable() {
           if (getState(1) == 3) {
             stripReady = false;
             initRulerBlinking();
+            playSound("measure");
             incrementState();
           }
         }, 2000);
@@ -295,6 +296,7 @@ function makeStripErasable() {
 
       // Pick a number! Any number!
       initRulerBlinking();
+      playSound("measure");
       incrementState();
     }
   });
