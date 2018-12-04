@@ -4,8 +4,7 @@ function onSignIn(googleUser) {
   $("#signin").addClass("hidden");
 
   // Welcome the learner.
-  playSound("hello");
-reflectionTime();
+  playSound("hello", 0);
 };
 
 function signOut() {

@@ -22,6 +22,12 @@ function makeRulerClickable() {
       stopRulerBlinking();
       addBlinkingShapes();
       resetGame();
+      var round = getState(0);
+      if (round < 2) {
+        playSound("after_measure" + round, 1);
+      } else {
+        playSound("reflect", 1);
+      }
       incrementState();
     }
   })

@@ -1,4 +1,15 @@
-var soundNames = ["hello", "pew", "raspberry", "belch", "measure"];
+var soundNames = [
+  "after_measure0",
+  "after_measure1",
+  "belch",
+  "hello",
+  "measure0",
+  "measure1",
+  "measure2",
+  "pew",
+  "raspberry",
+  "reflect"
+]
 var soundElems = [];
 
 // Set up sounds.
@@ -14,10 +25,12 @@ $(document).ready(function() {
 });
 
 // Play a sound with the given name.
-function playSound(name) {
+function playSound(name, delay) {
   var i = 0;
   while (name != soundNames[i] && i < soundNames.length) {
     i++;
   }
-  soundElems[i].cloneNode().play();
+  setTimeout(function() {
+    soundElems[i].cloneNode().play();
+  }, 1000 * delay);
 }

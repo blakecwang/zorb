@@ -246,7 +246,7 @@ function makeDispenserClickable() {
                  disX - disW / 2, disX + disW / 2,
                  disY - disH / 2, disY + disH / 2)) {
       if (getState(1) == 2) {
-        playSound("pew");
+        playSound("pew", 0);
         stopDispenserBlinking();
         launchZorb();
         incrementState();
@@ -256,7 +256,7 @@ function makeDispenserClickable() {
           if (getState(1) == 3) {
             stripReady = false;
             initRulerBlinking();
-            playSound("measure");
+            playSound("measure" + getState(0), 1);
             incrementState();
           }
         }, 2000);
@@ -296,7 +296,7 @@ function makeStripErasable() {
 
       // Pick a number! Any number!
       initRulerBlinking();
-      playSound("measure");
+      playSound("measure" + getState(0), 1);
       incrementState();
     }
   });
