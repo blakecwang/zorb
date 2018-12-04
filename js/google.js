@@ -5,6 +5,7 @@ function onSignIn(googleUser) {
 
   // Welcome the learner.
   playSound("hello");
+reflectionTime();
 };
 
 function signOut() {
