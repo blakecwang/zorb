@@ -170,3 +170,9 @@ img.iso {
   -moz-transform:rotateY(180deg); /* Firefox */
   width: 963px;
 }
+
+#camera {
+  width: 300px;
+  margin-left: 331px;
+  margin-top: 154px;
+}
