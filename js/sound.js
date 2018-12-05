@@ -1,13 +1,12 @@
 var soundNames = [
+  "add_ramp",
   "after_measure0",
   "after_measure1",
-  "belch",
   "hello",
   "measure0",
   "measure1",
   "measure2",
   "pew",
-  "raspberry",
   "reflect"
 ]
 var soundElems = [];
