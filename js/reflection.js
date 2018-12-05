@@ -1,7 +1,8 @@
 var mediaRecorder,
     chunks,
     blob,
-    videoURL;
+    videoURL,
+    cameraBlink;
 
 // Detect whether the user's browser supports video.
 function hasGetUserMedia() {
@@ -26,8 +27,10 @@ function addVideoWrapper() {
 
 // Replace the game with a camera logo.
 function addCamera() {
-  var cameraElem = $("<img id='camera' src='img/camera.png' />");
+  var cameraElem = $("<img class='camera' id='camera' src='img/camera.png' />");
   cameraElem.appendTo($("#video-wrapper"));
+  var cameraWhiteElem = $("<img class='camera' id='camera-white' style='display:none' src='img/camera-white.png' />");
+  cameraWhiteElem.appendTo($("#video-wrapper"));
 }
 
 // Replace the canvas with a video element.
@@ -38,7 +41,7 @@ function addVideo() {
   }
 
   // Remove the camera.
-  $("#camera").remove();
+  $(".camera").remove();
 
   // Add stop button.
   var stopWrapper = $("<div id='stop-wrapper' class='row'></div>");
@@ -89,10 +92,11 @@ function addVideo() {
       console.log('The following getUserMedia error occured: ' + err);
     });
 
-
   $("#stop").click(function() {
     mediaRecorder.stop();
     $(this).remove();
+    $("#signout-btn").remove();
+    $("#replay-btn").remove();
   });
 }
 
@@ -103,9 +107,12 @@ function reflectionTime() {
     addCamera();
   }, 1000);
   setTimeout(function() {
-    $("#camera").click(function(e) {
+    $(".camera").click(function(e) {
       addVideo();
     });
+    cameraBlink = setInterval(function() {
+      $(".camera").toggle();
+    }, 200);
   }, 8500);
 }
 
