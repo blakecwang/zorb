@@ -10,20 +10,24 @@ function hasGetUserMedia() {
 
 // Restructure the page for video reflection.
 function addVideoWrapper() {
+  // Add a new wrapper for video.
+  var videoWrapper = $("<div id='video-wrapper' class='col-xs-9' />");
+  videoWrapper.prependTo($("#lower"));
+
+  // Move the sign out button to it.
+  $('#video-wrapper').append($('#game-canvas-wrapper>#signout-btn'));
+  $('#video-wrapper').append($('#game-canvas-wrapper>#replay-btn'));
+
+  // Remove the old stuff.
   $("#upper").remove();
   $("#middle").remove();
   $("#corral").remove();
-  var videoWrapper = $("<div id='video-wrapper' class='col-xs-9' />");
-  videoWrapper.prependTo($("#lower"));
 }
 
 // Replace the game with a camera logo.
 function addCamera() {
   var cameraElem = $("<img id='camera' src='img/camera.png' />");
   cameraElem.appendTo($("#video-wrapper"));
-  $("#camera").click(function(e) {
-    addVideo();
-  });
 }
 
 // Replace the canvas with a video element.
@@ -96,9 +100,12 @@ function addVideo() {
 function reflectionTime() {
   setTimeout(function() {
     addVideoWrapper();
+    addCamera();
   }, 1000);
   setTimeout(function() {
-    addCamera();
+    $("#camera").click(function(e) {
+      addVideo();
+    });
   }, 8500);
 }
 

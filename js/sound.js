@@ -1,15 +1,17 @@
 var soundNames = [
   "add_ramp",
+  "pew",
   "after_measure0",
   "after_measure1",
   "hello",
   "measure0",
   "measure1",
   "measure2",
-  "pew",
   "reflect"
 ]
 var soundElems = [];
+var clonedElems = [];
+var lastPlayed = "hello";
 
 // Set up sounds.
 $(document).ready(function() {
@@ -30,6 +32,21 @@ function playSound(name, delay) {
     i++;
   }
   setTimeout(function() {
-    soundElems[i].cloneNode().play();
+    // Don't replay add_ramp or pew.
+    if (i > 1) {
+      lastPlayed = name;
+      clonedElems.forEach(function(elem) {
+        if (elem.readyState != 0 ) {
+          elem.pause();
+        }
+      });
+    }
+    clonedElems.push(soundElems[i].cloneNode());
+    clonedElems[clonedElems.length - 1].play();
   }, 1000 * delay);
 }
+
+// Add the replay button.
+$("#replay-btn").click(function() {
+  playSound(lastPlayed, 0);
+});

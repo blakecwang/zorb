@@ -138,12 +138,32 @@ img.iso {
   text-align: center;
 }
 
-#signout-btn {
+#signout-btn, #replay-btn {
   position: absolute;
-  right: 20px;
-  top: 10px;
+  right: 10px;
   color: black;
   font-size: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 5px solid black;
+  border-radius: 8px;
+  width: 170px;
+  text-align: center;
+}
+
+#signout-btn {
+  background-color: yellow;
+  top: 10px;
+}
+
+#replay-btn {
+  background-color: lightgreen;
+  top: 80px;
+}
+
+#signout-icon, #replay-icon {
+  height: 40px;
+  margin-right: 5px;
 }
 
 #signin {
