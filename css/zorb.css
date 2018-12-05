@@ -165,9 +165,6 @@ img.iso {
 }
 
 video {
-  transform: rotateY(180deg);
-  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-  -moz-transform:rotateY(180deg); /* Firefox */
   width: 963px;
 }
 
@@ -175,4 +172,18 @@ video {
   width: 300px;
   margin-left: 331px;
   margin-top: 154px;
+}
+
+#stop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+  margin-left: 85px;
+  font-size: 40px;
+  color: white;
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  border: 6px solid black;
 }
