@@ -1,5 +1,0 @@
-x zorb does not start off the screen
-x no gab between corral and notepad
-- smaller screens break the layout
-
-http://box2d-js.sourceforge.net/index2.html
